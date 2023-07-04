@@ -42,9 +42,9 @@ conda env create -f environment.yml
 For the **UCF-Crime** and **XD-Violence** datasets, we use off-the-shelf features extracted by [Wu et al](https://github.com/Roc-Ng). For the **ShanghaiTech** dataset, we used this [repo](https://github.com/v-iashin/video_features) to extract features (highly recommended).
 | Dataset     | Origin Video   | I3D Features  |
 | -------- | -------- | -------- |
-| UCF-Crime | [homepage](https://www.crcv.ucf.edu/projects/real-world/) | [download link](https://stuxidianeducn-my.sharepoint.com/:f:/g/personal/pengwu_stu_xidian_edu_cn/EvYcZ5rQZClGs_no2g-B0jcB4ynsonVQIreHIojNnUmPyA?e=xNrGxc) |
-| XD-Violence | [homepage](https://roc-ng.github.io/XD-Violence/) | [download link](https://roc-ng.github.io/XD-Violence/) |
-| ShanghaiTech | [homepage](https://svip-lab.github.io/dataset/campus_dataset.html) | [download link](https://drive.google.com/file/d/1kIv502RxQnMer-8HB7zrU_GU7CNPNNDv/view?usp=drive_link) |
+| UCF-Crime | &nbsp;[homepage](https://www.crcv.ucf.edu/projects/real-world/) | [download link](https://stuxidianeducn-my.sharepoint.com/:f:/g/personal/pengwu_stu_xidian_edu_cn/EvYcZ5rQZClGs_no2g-B0jcB4ynsonVQIreHIojNnUmPyA?e=xNrGxc) |
+| XD-Violence | &nbsp;[homepage](https://roc-ng.github.io/XD-Violence/) | [download link](https://roc-ng.github.io/XD-Violence/) |
+| ShanghaiTech | &nbsp;[homepage](https://svip-lab.github.io/dataset/campus_dataset.html) | [download link](https://drive.google.com/file/d/1kIv502RxQnMer-8HB7zrU_GU7CNPNNDv/view?usp=drive_link) |
 
 Before the Quick Start, please download above features and change **feat_prefix** in config.py to your local path.
 
@@ -87,18 +87,14 @@ python main.py --dataset 'ucf' --mode 'train'  # dataset:['ucf', 'xd', 'sh']  mo
 ```
 - Run the following command for **test/inference**:
 ```
-python main.py --dataset 'ucf' --mode 'test'  # dataset:['ucf', 'xd', 'sh']  mode:['train', 'infer']
+python main.py --dataset 'ucf' --mode 'infer'  # dataset:['ucf', 'xd', 'sh']  mode:['train', 'infer']
 ```
 
 ## Results and Models
-Below are the results with score smoothing in the testing phase.
+Below are the results with score smoothing in the testing phase. Note that our experiments are conducted on a single Tesla A40 GPU, and different torch or cuda versions can lead to slightly different results.
 | Dataset     | AUC (%)   | AP (%)  | FAR (%)  |  checkpoint  |  log |
 | --------     | -------- | -------- | -------- | -------- | -------- |
 | UCF-Crime    |   **86.76**  |  33.99   |  0.47    |  [link](https://github.com/Aaron-Pu/PEL4VAD/blob/master/ckpt/ucf__8636.pkl)  |  [link](https://github.com/Aaron-Pu/PEL4VAD/blob/master/log_info.log)        |
 | XD-Violence  |   94.94  |  **85.59**   |  0.57    |  [link](https://github.com/Aaron-Pu/PEL4VAD/blob/master/ckpt/xd__8526.pkl)        |       [link](https://github.com/Aaron-Pu/PEL4VAD/blob/master/log_info.log)   |
 | ShanghaiTech |   **98.14**  |  72.56   |  0.00    |  [link](https://github.com/Aaron-Pu/PEL4VAD/blob/master/ckpt/SH__98.pkl)        |        [link](https://github.com/Aaron-Pu/PEL4VAD/blob/master/log_info.log)  |
-
-Note that our experiments are conducted on a single Tesla A40 GPU, and different torch or cuda versions can lead to slightly different results.
-
-
 
