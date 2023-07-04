@@ -59,17 +59,21 @@ train_list = './list/ucf/train.list'  # the split file of training set
 test_list = './list/ucf/test.list'  #  the split file of test/infer set
 token_feat = './list/ucf/ucf-prompt.npy'  # the prompt feature extracted by CLIP
 gt = './list/ucf/ucf-gt.npy'  # the ground-truth of test videos
+
 # TCA settings
 win_size = 9  # the local window size
 gamma = 0.6  # initialization for DPE
 bias = 0.2  # initialization for DPE 
 norm = True  # whether adaptive fusion uses normalization
+
 # CC settings
 t_step = 9  # the kernel size of causal convolution
+
 # training settings
 temp = 0.09  # the temperature for contrastive learning
 lamda = 1  # the loss weight
 seed = 9  # random seed
+
 # test settings
 test_bs = 10  # test batch size
 smooth = 'slide'  # the type of score smoothing ['None', 'fixed': 10, slide': 7]
@@ -85,6 +89,14 @@ python main.py --dataset 'ucf' --mode 'train'  # dataset:['ucf', 'xd', 'sh']  mo
 ```
 python main.py --dataset 'ucf' --mode 'test'  # dataset:['ucf', 'xd', 'sh']  mode:['train', 'infer']
 ```
+
+## Results and Models
+Below are the results with score smoothing in the testing phase.
+| Dataset     | AUC (%)   | AP (%)  | FAR (%)  |  checkpoint  |  log |
+| --------     | -------- | -------- | -------- | -------- | -------- |
+| UCF-Crime    |   **86.76**  |  33.99   |  0.47    |  [link](https://github.com/Aaron-Pu/PEL4VAD/blob/master/ckpt/ucf__8636.pkl)  |  [link](https://github.com/Aaron-Pu/PEL4VAD/blob/master/log_info.log)        |
+| XD-Violence  |   94.94  |  **85.59**   |  0.57    |  [link](https://github.com/Aaron-Pu/PEL4VAD/blob/master/ckpt/xd__8526.pkl)        |       [link](https://github.com/Aaron-Pu/PEL4VAD/blob/master/log_info.log)   |
+| ShanghaiTech |   **98.14**  |  72.56   |  0.00    |  [link](https://github.com/Aaron-Pu/PEL4VAD/blob/master/ckpt/SH__98.pkl)        |        [link](https://github.com/Aaron-Pu/PEL4VAD/blob/master/log_info.log)  |
 
 Note that our experiments are conducted on a single Tesla A40 GPU, and different GPU types and torch/cuda versions can lead to slightly different results.
 
