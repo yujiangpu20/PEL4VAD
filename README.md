@@ -50,7 +50,7 @@ For the **UCF-Crime** and **XD-Violence** datasets, we use off-the-shelf feature
 Before the Quick Start, please download above features and change **feat_prefix** in config.py to your local path.
 
 ## Quick Start
-Please modify the hyperparameters in **config.py** as necessary, where we keep default settings as mentioned in our paper. The example of configs for UCF-Crime is shown as follows:
+Please change the hyperparameters in **config.py** if necessary, where we keep default settings as mentioned in our paper. The example of configs for UCF-Crime is shown as follows:
 ```
 dataset = 'ucf-crime'
 model_name = 'ucf_'
