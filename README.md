@@ -33,4 +33,16 @@ pandas==1.3.4
 tqdm==4.63.0
 xlwt==2.5
 ```
-The required packages can be installed directly by running the following command:
+The environment with required packages can be created directly by running the following command:
+```
+conda env create -f environment.yml
+```
+
+## Datasets
+We conducted experiments on the UCF-Crime, XD-Violence, and ShanghaiTech datasets. You can download the original video and the extracted features from the links below.
+| Dataset     | Origin Video   | I3D Features  |
+| -------- | -------- | -------- |
+| UCF-Crime | 行1，列2 | 行1，列3 |
+| XD-Violence | 行2，列2 | 行2，列3 |
+| ShanghaiTech | 行3，列2 | 行3，列3 |
+
