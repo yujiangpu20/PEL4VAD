@@ -7,7 +7,7 @@ Prompt-Enhanced Learning aims to enrich potential context information via knowle
 
 ## Approach
 
-![CLIP](CLIP.png)
+![PEL](PEL.png)
 
 
 
