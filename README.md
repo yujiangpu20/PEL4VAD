@@ -10,13 +10,13 @@ Video anomaly detection under weak supervision is challenging due to the absence
 
 **Contents**
 
-[1. Introduction](#1.&nbsp;Introduction)  
-[2. Requirements](#2.&nbsp;Requirements)  
-[3. Datasets](#3.&nbsp;Datasets)  
-[4. Quick Start](#4.&nbsp;Quick-Start)  
-[5. Results and Models](#5.&nbsp;Results-and-Models)  
-[6. Acknowledgement](#6.&nbsp;Acknowledgement)  
-[7. Citation](#7.&nbsp;Citation)  
+[1. Introduction](#Introduction)  
+[2. Requirements](#Requirements)  
+[3. Datasets](#Datasets)  
+[4. Quick Start](#Quick-Start)  
+[5. Results and Models](#Results-and-Models)  
+[6. Acknowledgement](#Acknowledgement)  
+[7. Citation](#Citation)  
 
 
 ## 1. Introduction
