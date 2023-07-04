@@ -19,10 +19,10 @@ Video anomaly detection under weak supervision is challenging due to the absence
 [7. Citation](#Citation)  
 
 
-## 1. Introduction
+## Introduction
 This repo is the official implementation of "Learning Prompt-Enhanced Context features for Weakly-Supervised Video Anomlay Detection" (under review). The original paper can be found [here](https://arxiv.org/pdf/2306.14451.pdf). We also submitted a [supplementary document](https://drive.google.com/file/d/1CxvDFjiMg_RdEZA5_aOwwCEXlJuMMlxk/view?usp=drive_link) with a [demo video](https://drive.google.com/file/d/1A2E0_ylViA6LCQkb7XOQAum1VUoFMroL/view?usp=drive_link) for peer review. Please feel free to contact me if you have any questions.
 
-## 2. Requirements
+## Requirements
 The code requires ```python>=3.8``` and the following packages:
 ```
 torch==1.8.0
@@ -39,7 +39,7 @@ The environment with required packages can be created directly by running the fo
 conda env create -f environment.yml
 ```
 
-## 3. Datasets
+## Datasets
 For the **UCF-Crime** and **XD-Violence** datasets, we use off-the-shelf features extracted by [Wu et al](https://github.com/Roc-Ng). For the **ShanghaiTech** dataset, we used this [repo](https://github.com/v-iashin/video_features) to extract features (highly recommended).
 | Dataset     | Origin Video   | I3D Features  |
 | -------- | -------- | -------- |
@@ -49,7 +49,7 @@ For the **UCF-Crime** and **XD-Violence** datasets, we use off-the-shelf feature
 
 Before the Quick Start, please download above features and change **feat_prefix** in config.py to your local path.
 
-## 4. Quick Start
+## Quick Start
 Please modify the hyperparameters in **config.py** as necessary, where we keep default settings as mentioned in our paper. The example of configs for UCF-Crime is shown as follows:
 ```
 dataset = 'ucf-crime'
@@ -91,7 +91,7 @@ python main.py --dataset 'ucf' --mode 'train'  # dataset:['ucf', 'xd', 'sh']  mo
 python main.py --dataset 'ucf' --mode 'infer'  # dataset:['ucf', 'xd', 'sh']  mode:['train', 'infer']
 ```
 
-## 5. Results and Models
+## Results and Models
 Below are the results with score smoothing in the testing phase. Note that our experiments are conducted on a single Tesla A40 GPU, and different torch or cuda versions can lead to slightly different results.
 | Dataset     | AUC (%)   | AP (%)  | FAR (%)  |  ckpt  |  log |
 | --------     | -------- | -------- | -------- | -------- | -------- |
@@ -99,10 +99,10 @@ Below are the results with score smoothing in the testing phase. Note that our e
 | &nbsp;XD-Violence  |   &nbsp;&nbsp;94.94  |  &nbsp;**85.59**   |  &nbsp;&nbsp;&nbsp;0.57    |  &nbsp;&nbsp;[link](https://github.com/Aaron-Pu/PEL4VAD/blob/master/ckpt/xd__8526.pkl)        |       [link](https://github.com/Aaron-Pu/PEL4VAD/blob/master/log_info.log)   |
 | ShanghaiTech |   &nbsp;&nbsp;**98.14**  |  &nbsp;72.56   |  &nbsp;&nbsp;&nbsp;0.00    |  &nbsp;&nbsp;[link](https://github.com/Aaron-Pu/PEL4VAD/blob/master/ckpt/SH__98.pkl)        |        [link](https://github.com/Aaron-Pu/PEL4VAD/blob/master/log_info.log)  |
 
-## 6. Acknowledgement
+## Acknowledgement
 Our codebase mainly refers to [XDVioDet](https://github.com/Roc-Ng/XDVioDet) and [CLIP](https://github.com/openai/CLIP). We greatly appreciate their excellent contribution with nicely organized code!
 
-## 7. Citation
+## Citation
 If this repo works positively for your research, please consider citing our paper. Thanks all!
 ```
 @article{pu2023learning,
