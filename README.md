@@ -45,6 +45,7 @@ For the **UCF-Crime** and **XD-Violence** datasets, we use off-the-shelf feature
 | UCF-Crime | [homepage](https://www.crcv.ucf.edu/projects/real-world/) | [download link](https://stuxidianeducn-my.sharepoint.com/:f:/g/personal/pengwu_stu_xidian_edu_cn/EvYcZ5rQZClGs_no2g-B0jcB4ynsonVQIreHIojNnUmPyA?e=xNrGxc) |
 | XD-Violence | [homepage](https://roc-ng.github.io/XD-Violence/) | [download link](https://roc-ng.github.io/XD-Violence/) |
 | ShanghaiTech | [homepage](https://svip-lab.github.io/dataset/campus_dataset.html) | [download link](https://drive.google.com/file/d/1kIv502RxQnMer-8HB7zrU_GU7CNPNNDv/view?usp=drive_link) |
+
 Before the Quick Start, please download above features and change **feat_prefix** in config.py to your local path.
 
 ## Quick Start
@@ -78,7 +79,12 @@ ckpt_path = './ckpt/ucf__8636.pkl'
 
 - Run the following command for training:
 ```
-python main.py --dataset --train
+python main.py --dataset='ucf' --mode='train'  # dataset:['ucf', 'xd', 'sh']  mode:['train', 'infer']
 ```
+- Run the following command for test/inference:
+```
+python main.py --dataset='ucf' --mode='test'  # dataset:['ucf', 'xd', 'sh']  mode:['train', 'infer']
+```
+
 
 
