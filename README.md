@@ -39,7 +39,7 @@ conda env create -f environment.yml
 ```
 
 ## Datasets
-We conducted experiments on the UCF-Crime, XD-Violence, and ShanghaiTech datasets. You can download the original video and the extracted features from the links below.
+We conducted experiments on the UCF-Crime, XD-Violence, and ShanghaiTech datasets. For the UCF-Crime and XD-Violence datasets, we use off-the-shelf features extracted by [Wu et al](https://github.com/Roc-Ng). For the ShanghaiTech dataset, we used this [repo](https://github.com/v-iashin/video_features) to extract features (highly recommended).
 | Dataset     | Origin Video   | I3D Features  |
 | -------- | -------- | -------- |
 | UCF-Crime | [homepage](https://www.crcv.ucf.edu/projects/real-world/) | [download link](https://stuxidianeducn-my.sharepoint.com/:f:/g/personal/pengwu_stu_xidian_edu_cn/EvYcZ5rQZClGs_no2g-B0jcB4ynsonVQIreHIojNnUmPyA?e=xNrGxc) |
