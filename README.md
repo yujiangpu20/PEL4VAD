@@ -6,7 +6,7 @@ Video anomaly detection under weak supervision is challenging due to the absence
 
 [[pdf](https://arxiv.org/pdf/2306.14451.pdf)] [[supp](https://drive.google.com/file/d/1CxvDFjiMg_RdEZA5_aOwwCEXlJuMMlxk/view?usp=drive_link)] [[video](https://drive.google.com/file/d/1A2E0_ylViA6LCQkb7XOQAum1VUoFMroL/view?usp=drive_link)]
 
-![](https://drive.google.com/file/d/1_BB2zegO8-HFn5JqAk7hQhUzpLcACxzC/view?usp=drive_link)
+![image](https://github.com/Aaron-Pu/PEL4VAD/blob/master/list/framework.png)
 
 **Content**
 
