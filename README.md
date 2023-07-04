@@ -1,4 +1,4 @@
-# Learning Prompt-Enhanced Context features for Weakly-Supervised Video Anomlay Detection
+# Learning Prompt-Enhanced Context features for Weakly-Supervised Video Anomaly Detection
 **Authors**: Yujiang Pu, Xiaoyu Wu, Shengjin Wang
 
 ## Abstract
@@ -39,12 +39,46 @@ conda env create -f environment.yml
 ```
 
 ## Datasets
-We conducted experiments on the UCF-Crime, XD-Violence, and ShanghaiTech datasets. For the UCF-Crime and XD-Violence datasets, we use off-the-shelf features extracted by [Wu et al](https://github.com/Roc-Ng). For the ShanghaiTech dataset, we used this [repo](https://github.com/v-iashin/video_features) to extract features (highly recommended).
+For the **UCF-Crime** and **XD-Violence** datasets, we use off-the-shelf features extracted by [Wu et al](https://github.com/Roc-Ng). For the **ShanghaiTech** dataset, we used this [repo](https://github.com/v-iashin/video_features) to extract features (highly recommended).
 | Dataset     | Origin Video   | I3D Features  |
 | -------- | -------- | -------- |
 | UCF-Crime | [homepage](https://www.crcv.ucf.edu/projects/real-world/) | [download link](https://stuxidianeducn-my.sharepoint.com/:f:/g/personal/pengwu_stu_xidian_edu_cn/EvYcZ5rQZClGs_no2g-B0jcB4ynsonVQIreHIojNnUmPyA?e=xNrGxc) |
 | XD-Violence | [homepage](https://roc-ng.github.io/XD-Violence/) | [download link](https://roc-ng.github.io/XD-Violence/) |
-| ShanghaiTech | [homepage](https://svip-lab.github.io/dataset/campus_dataset.html) | [download link](http://101.32.75.151:8181/dataset/) |
+| ShanghaiTech | [homepage](https://svip-lab.github.io/dataset/campus_dataset.html) | [download link](https://drive.google.com/file/d/1kIv502RxQnMer-8HB7zrU_GU7CNPNNDv/view?usp=drive_link) |
+Before the Quick Start, please download above features and change **feat_prefix** in config.py to your local path.
 
 ## Quick Start
+Please modify the hyperparameters in **config.py** as necessary, where we keep default settings as mentioned in our paper. The example of configs for UCF-Crime is shown as follows:
+```
+dataset = 'ucf-crime'
+model_name = 'ucf_'
+metrics = 'AUC'  # the evaluation metric
+feat_prefix = '/data/pyj/feat/ucf-i3d'  # the prefix path of the video features
+train_list = './list/ucf/train.list'  # the split file of training set
+test_list = './list/ucf/test.list'  #  the split file of test/infer set
+token_feat = './list/ucf/ucf-prompt.npy'  # the prompt feature extracted by CLIP
+gt = './list/ucf/ucf-gt.npy'  # the ground-truth of test videos
+# TCA settings
+win_size = 9  # the local window size
+gamma = 0.6  # initialization for DPE
+bias = 0.2  # initialization for DPE 
+norm = True  # whether adaptive fusion uses normalization
+# CC settings
+t_step = 9  # the kernel size of causal convolution
+# training settings
+temp = 0.09  # the temperature for contrastive learning
+lamda = 1  # the loss weight
+seed = 9  # random seed
+# test settings
+test_bs = 10  # test batch size
+smooth = 'slide'  # the type of score smoothing ['fixed': 10, slide': 7]
+kappa = 7  # the smoothing window
+ckpt_path = './ckpt/ucf__8636.pkl'
+```
+
+- Run the following command for training:
+```
+python main.py --dataset --train
+```
+
 
