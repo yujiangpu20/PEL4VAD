@@ -92,7 +92,7 @@ python main.py --dataset 'ucf' --mode 'infer'  # dataset:['ucf', 'xd', 'sh']  mo
 
 ## Results and Models
 Below are the results with score smoothing in the testing phase. Note that our experiments are conducted on a single Tesla A40 GPU, and different torch or cuda versions can lead to slightly different results.
-| Dataset     | AUC (%)   | AP (%)  | FAR (%)  |  checkpoint  |  log |
+| Dataset     | AUC (%)   | AP (%)  | FAR (%)  |  ckpt  |  log |
 | --------     | -------- | -------- | -------- | -------- | -------- |
 | &nbsp;&nbsp;UCF-Crime    |   &nbsp;&nbsp;**86.76**  |  &nbsp;33.99   |  &nbsp;&nbsp;&nbsp;0.47    |  &nbsp;&nbsp;&nbsp;&nbsp;[link](https://github.com/Aaron-Pu/PEL4VAD/blob/master/ckpt/ucf__8636.pkl)  |  [link](https://github.com/Aaron-Pu/PEL4VAD/blob/master/log_info.log)        |
 | &nbsp;XD-Violence  |   &nbsp;&nbsp;94.94  |  &nbsp;**85.59**   |  &nbsp;&nbsp;&nbsp;0.57    |  &nbsp;&nbsp;&nbsp;&nbsp;[link](https://github.com/Aaron-Pu/PEL4VAD/blob/master/ckpt/xd__8526.pkl)        |       [link](https://github.com/Aaron-Pu/PEL4VAD/blob/master/log_info.log)   |
