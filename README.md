@@ -72,19 +72,21 @@ lamda = 1  # the loss weight
 seed = 9  # random seed
 # test settings
 test_bs = 10  # test batch size
-smooth = 'slide'  # the type of score smoothing ['fixed': 10, slide': 7]
+smooth = 'slide'  # the type of score smoothing ['None', 'fixed': 10, slide': 7]
 kappa = 7  # the smoothing window
 ckpt_path = './ckpt/ucf__8636.pkl'
 ```
 
 - Run the following command for training:
 ```
-python main.py --dataset='ucf' --mode='train'  # dataset:['ucf', 'xd', 'sh']  mode:['train', 'infer']
+python main.py --dataset 'ucf' --mode 'train'  # dataset:['ucf', 'xd', 'sh']  mode:['train', 'infer']
 ```
 - Run the following command for test/inference:
 ```
-python main.py --dataset='ucf' --mode='test'  # dataset:['ucf', 'xd', 'sh']  mode:['train', 'infer']
+python main.py --dataset 'ucf' --mode 'test'  # dataset:['ucf', 'xd', 'sh']  mode:['train', 'infer']
 ```
+
+Note that our experiments are conducted on a single Tesla A40 GPU, and different GPU types and torch/cuda versions can lead to slightly different results.
 
 
 
