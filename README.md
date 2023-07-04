@@ -81,11 +81,11 @@ kappa = 7  # the smoothing window
 ckpt_path = './ckpt/ucf__8636.pkl'
 ```
 
-- Run the following command for training:
+- Run the following command for **training**:
 ```
 python main.py --dataset 'ucf' --mode 'train'  # dataset:['ucf', 'xd', 'sh']  mode:['train', 'infer']
 ```
-- Run the following command for test/inference:
+- Run the following command for **test/inference**:
 ```
 python main.py --dataset 'ucf' --mode 'test'  # dataset:['ucf', 'xd', 'sh']  mode:['train', 'infer']
 ```
@@ -98,7 +98,7 @@ Below are the results with score smoothing in the testing phase.
 | XD-Violence  |   94.94  |  **85.59**   |  0.57    |  [link](https://github.com/Aaron-Pu/PEL4VAD/blob/master/ckpt/xd__8526.pkl)        |       [link](https://github.com/Aaron-Pu/PEL4VAD/blob/master/log_info.log)   |
 | ShanghaiTech |   **98.14**  |  72.56   |  0.00    |  [link](https://github.com/Aaron-Pu/PEL4VAD/blob/master/ckpt/SH__98.pkl)        |        [link](https://github.com/Aaron-Pu/PEL4VAD/blob/master/log_info.log)  |
 
-Note that our experiments are conducted on a single Tesla A40 GPU, and different GPU types and torch/cuda versions can lead to slightly different results.
+Note that our experiments are conducted on a single Tesla A40 GPU, and different torch or cuda versions can lead to slightly different results.
 
 
 
