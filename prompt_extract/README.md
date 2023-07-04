@@ -22,8 +22,8 @@ python concept_extract.py --dataset 'ucf'  # dataset:['ucf', 'xd', 'sh']
 ## Make sure you can run CLIP model.
 python token_extract.py --dataset 'ucf'  # dataset:['ucf', 'xd', 'sh']
 ```
-3. Move the prompt feature to ```list/dataset/``` and change the **token_feat** in config.py.
+3. Move the prompt feature to ```list/dataset/``` and change the path of **token_feat** in config.py.
 
 ## Reference
-[1. ConceptNet 5.5: An Open Multilingual Graph of General Knowledge](https://arxiv.org/pdf/1612.03975.pdf) [[code](https://github.com/commonsense/conceptnet5)]
+[1. ConceptNet 5.5: An Open Multilingual Graph of General Knowledge](https://arxiv.org/pdf/1612.03975.pdf) [[code](https://github.com/commonsense/conceptnet5)]  
 [2. Learning Transferable Visual Models From Natural Language Supervision](https://arxiv.org/pdf/2103.00020.pdf) [[code](https://github.com/openai/CLIP)]
