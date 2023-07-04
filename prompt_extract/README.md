@@ -13,4 +13,11 @@ Prompt-Enhanced Learning aims to enrich potential context information via knowle
 
 ## Usage
 
-- 
+- Generate Anomaly Dictionary (.json file) by running the following command:
+```
+python concept_extract.py --dataset 'ucf'  # dataset:['ucf', 'xd', 'sh']
+```
+- Extract prompt feature (.npy file) by running the following command:
+```
+python token_extract.py --dataset 'ucf'  # dataset:['ucf', 'xd', 'sh']
+```
