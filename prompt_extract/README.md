@@ -10,16 +10,17 @@ Prompt-Enhanced Learning aims to enrich potential context information via knowle
 
 
 ## Usage
-1. Generate Anomaly Dictionary (.json file saved to json) by running the following command:
+1. Generate Anomaly Dictionary (.json file saved to *json*) by running the following command:
 
 ```
 python concept_extract.py --dataset 'ucf'  # dataset:['ucf', 'xd', 'sh']
 ```
 
-2. Extract prompt feature (.npy file saved to prompt_feature) by running the following command:
+2. Extract prompt feature (.npy file saved to *prompt_feature*) by running the following command:
 
 ```
 ## Make sure you can run CLIP model.
+
 python token_extract.py --dataset 'ucf'  # dataset:['ucf', 'xd', 'sh']
 ```
 3. Move the prompt feature to ```list/dataset/``` and change the path of **token_feat** in config.py.
