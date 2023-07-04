@@ -13,8 +13,8 @@ Video anomaly detection under weak supervision is challenging due to the absence
 [1. Introduction](#Introduction)  
 [2. Requirements](#Requirements)  
 [3. Datasets](#Datasets)  
-[4. Quick Start](#Quick&nbsp;Start)  
-[5. Results and Models](#Results&nbsp;and&nbsp;Models)  
+[4. Quick Start](#Quick-Start)  
+[5. Results and Models](#Results-and-Models)  
 [6. Acknowledgement](#Acknowledgement)  
 [7. Citation](#Citation)  
 
@@ -99,10 +99,10 @@ Below are the results with score smoothing in the testing phase. Note that our e
 | &nbsp;XD-Violence  |   &nbsp;&nbsp;94.94  |  &nbsp;**85.59**   |  &nbsp;&nbsp;&nbsp;0.57    |  &nbsp;&nbsp;[link](https://github.com/Aaron-Pu/PEL4VAD/blob/master/ckpt/xd__8526.pkl)        |       [link](https://github.com/Aaron-Pu/PEL4VAD/blob/master/log_info.log)   |
 | ShanghaiTech |   &nbsp;&nbsp;**98.14**  |  &nbsp;72.56   |  &nbsp;&nbsp;&nbsp;0.00    |  &nbsp;&nbsp;[link](https://github.com/Aaron-Pu/PEL4VAD/blob/master/ckpt/SH__98.pkl)        |        [link](https://github.com/Aaron-Pu/PEL4VAD/blob/master/log_info.log)  |
 
-# Acknowledgement
+## Acknowledgement
 Our codebase mainly refers to [XDVioDet](https://github.com/Roc-Ng/XDVioDet) and [CLIP](https://github.com/openai/CLIP). We greatly appreciate their excellent contribution with nicely organized code!
 
-# Citation
+## Citation
 If this repo works positively for your research, please consider citing our paper. Thanks all!
 ```
 @article{pu2023learning,
