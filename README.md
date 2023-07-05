@@ -95,9 +95,9 @@ python main.py --dataset 'ucf' --mode 'infer'  # dataset:['ucf', 'xd', 'sh']  mo
 Below are the results with score smoothing in the testing phase. Note that our experiments are conducted on a single Tesla A40 GPU, and different torch or cuda versions can lead to slightly different results.
 | Dataset     | AUC (%)   | AP (%)  | FAR (%)  |  ckpt  |  log |
 | --------     | -------- | -------- | -------- | -------- | -------- |
-| &nbsp;&nbsp;UCF-Crime    |   &nbsp;&nbsp;**86.76**  |  &nbsp;33.99   |  &nbsp;&nbsp;&nbsp;0.47    |  [link](https://github.com/Aaron-Pu/PEL4VAD/blob/master/ckpt/ucf__8636.pkl)  |  [link](https://github.com/Aaron-Pu/PEL4VAD/blob/master/log_info.log)        |
-| &nbsp;XD-Violence  |   &nbsp;&nbsp;94.94  |  &nbsp;**85.59**   |  &nbsp;&nbsp;&nbsp;0.57    |  [link](https://github.com/Aaron-Pu/PEL4VAD/blob/master/ckpt/xd__8526.pkl)        |       [link](https://github.com/Aaron-Pu/PEL4VAD/blob/master/log_info.log)   |
-| ShanghaiTech |   &nbsp;&nbsp;**98.14**  |  &nbsp;72.56   |  &nbsp;&nbsp;&nbsp;0.00    |  [link](https://github.com/Aaron-Pu/PEL4VAD/blob/master/ckpt/SH__98.pkl)        |        [link](https://github.com/Aaron-Pu/PEL4VAD/blob/master/log_info.log)  |
+| &nbsp;&nbsp;UCF-Crime    |   &nbsp;&nbsp;**86.76**  |  &nbsp;33.99   |  &nbsp;&nbsp;&nbsp;0.47    |  &nbsp;[link](https://github.com/Aaron-Pu/PEL4VAD/blob/master/ckpt/ucf__8636.pkl)  |  [link](https://github.com/Aaron-Pu/PEL4VAD/blob/master/log_info.log)        |
+| &nbsp;XD-Violence  |   &nbsp;&nbsp;94.94  |  &nbsp;**85.59**   |  &nbsp;&nbsp;&nbsp;0.57    |  &nbsp;[link](https://github.com/Aaron-Pu/PEL4VAD/blob/master/ckpt/xd__8526.pkl)        |       [link](https://github.com/Aaron-Pu/PEL4VAD/blob/master/log_info.log)   |
+| ShanghaiTech |   &nbsp;&nbsp;**98.14**  |  &nbsp;72.56   |  &nbsp;&nbsp;&nbsp;0.00    |  &nbsp;[link](https://github.com/Aaron-Pu/PEL4VAD/blob/master/ckpt/SH__98.pkl)        |        [link](https://github.com/Aaron-Pu/PEL4VAD/blob/master/log_info.log)  |
 
 ## Acknowledgement
 Our codebase mainly refers to [XDVioDet](https://github.com/Roc-Ng/XDVioDet) and [CLIP](https://github.com/openai/CLIP). We greatly appreciate their excellent contribution with nicely organized code!
