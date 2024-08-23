@@ -18,7 +18,7 @@ Video anomaly detection under weak supervision presents significant challenges, 
 
 
 ## Introduction
-This repo is the official implementation of "Learning Prompt-Enhanced Context features for Weakly-Supervised Video Anomlay Detection" (under review). The original paper can be found [here](https://arxiv.org/pdf/2306.14451.pdf). Please feel free to contact me if you have any questions.
+This repo is the official implementation of "Learning Prompt-Enhanced Context features for Weakly-Supervised Video Anomlay Detection" (Preprint on Jun.2023). The original paper can be found [here](https://arxiv.org/pdf/2306.14451.pdf). Please feel free to contact me if you have any questions.
 
 ## Requirements
 The code requires ```python>=3.8``` and the following packages:
